@@ -72,7 +72,7 @@ python bio.py
 
 ## Author
 
-- Name: Bisnu Ray
+- Name: Elite Sid
 - Telegram: [@TeamXUpdate](https://t.me/TeamXUpdate)
 
 Feel free to reach out if you have any questions or feedback.
