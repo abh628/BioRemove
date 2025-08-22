@@ -35,7 +35,7 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 ```bash
-git clone https://github.com/strad-dev131/BoLinki-Protector
+git clone https://github.com/strad-dev131/BoLink-Protector
 cd BioLink-Protector
 pip install -r requirements.txt
 
