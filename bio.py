@@ -145,7 +145,6 @@ async def command_unfree(client: Client, message):
 
     keyboard = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("✅ Whitelist", callback_data=f"whitelist_{target.id}"),
             InlineKeyboardButton("🗑️ Close", callback_data="close")
         ]
     ])
@@ -250,7 +249,6 @@ async def callback_handler(client: Client, callback_query):
 
             kb = InlineKeyboardMarkup([
                 [
-                    InlineKeyboardButton("Whitelist ✅", callback_data=f"whitelist_{target_id}"),
                     InlineKeyboardButton("🗑️ Close", callback_data="close")
                 ]
             ])
@@ -267,8 +265,7 @@ async def callback_handler(client: Client, callback_query):
         full_name = f"{user.first_name}{(' ' + user.last_name) if user.last_name else ''}"
         mention = f"[{full_name}](tg://user?id={target_id})"
         kb = InlineKeyboardMarkup([
-            [InlineKeyboardButton("Whitelist✅", callback_data=f"whitelist_{target_id}"),
-             InlineKeyboardButton("🗑️ Close", callback_data="close")]
+            [InlineKeyboardButton("🗑️ Close", callback_data="close")]
         ])
         await callback_query.message.edit_text(f"**✅ {mention} [`{target_id}`] has no more warnings!**", reply_markup=kb)
         return await callback_query.answer()
@@ -294,8 +291,7 @@ async def callback_handler(client: Client, callback_query):
         full_name = f"{user.first_name}{(' ' + user.last_name) if user.last_name else ''}"
         mention = f"[{full_name}](tg://user?id={target_id})"
         kb = InlineKeyboardMarkup([
-            [InlineKeyboardButton("Whitelist✅", callback_data=f"whitelist_{target_id}"),
-             InlineKeyboardButton("🗑️ Close", callback_data="close")]
+            [InlineKeyboardButton("🗑️ Close", callback_data="close")]
         ])
         await callback_query.message.edit_text(f"**❌ {mention} [`{target_id}`] has been removed from whitelist.**", reply_markup=kb)
         return await callback_query.answer()
@@ -329,8 +325,6 @@ async def check_bio(client: Client, message):
                 "**Notice: Please remove any links from your bio.**"
             )
             keyboard = InlineKeyboardMarkup([
-                [InlineKeyboardButton("❌ Cancel Warning", callback_data=f"cancel_warn_{user_id}"),
-                 InlineKeyboardButton("✅ Whitelist", callback_data=f"whitelist_{user_id}")],
                 [InlineKeyboardButton("🗑️ Close", callback_data="close")]
             ])
             sent = await message.reply_text(warning_text, reply_markup=keyboard)
