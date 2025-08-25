@@ -1,7 +1,7 @@
 """
 Author: Elite Sid
-User: https://t.me/SID_ELITE
-Channel: https://t.me/TeamXUpdate
+User: https://t.me/MrRockyTg
+Channel: https://t.me/RockyXSupport
 """
 
 from pyrogram import Client, filters, errors
@@ -22,7 +22,7 @@ from config import (
 )
 
 app = Client(
-    "biolink_protector_bot",
+    "biolink_Restrictor_bot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
@@ -46,7 +46,7 @@ async def start_handler(client: Client, message):
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("➕ Add Me to Your Group", url=add_url)],
         [
-            InlineKeyboardButton("🛠️ Support", url="https://t.me/TeamsXchat"),
+            InlineKeyboardButton("🛠️ Support", url="https://t.me/RockyXUpdate"),
             InlineKeyboardButton("🗑️ Close", callback_data="close")
         ]
     ])
