@@ -1,5 +1,5 @@
-# Copyright (C) @SID_ELITE
-# Channel: https://t.me/TeamXUpdate
+# Copyright (C) @MrRockyTg
+# Channel: https://t.me/RockyXSupport
 
 import re
 
